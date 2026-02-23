@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border-radius</title>
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      /* start */
+      .container1 {
+        width: 400px;
+        height: 400px;
+        float: left;
+      }
+      .main1 {
+        width: 200px;
+        height: 400px;
+
+        float: left;
+      }
+      .satu {
+        width: 200px;
+        height: 200px;
+        border-radius: 0 50% 0 50%;
+
+        overflow: hidden;
+      }
+      .satu img {
+        width: 200px;
+      }
+      .dua {
+        width: 200px;
+        height: 200px;
+
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+      }
+      .side-bar1 {
+        width: 200px;
+        height: 400px;
+        float: right;
+      }
+      .tiga {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 50% 0 50% 0;
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+      }
+      .empat {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 0 50% 0 50%;
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+      }
+
+      .container2 {
+        width: 800px;
+        height: 900px;
+
+        display: inline-block;
+        font-size: 0; /* Jarak otomatis hilang! */
+      }
+      .lingkaran,
+      .setengah1,
+      .setengah2,
+      .kotak,
+      .kapsul {
+        display: inline-block;
+      }
+      .lingkaran {
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+        border-radius: 150%;
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+      }
+      .setengah1 {
+        width: 200px;
+        height: 100px;
+        background-color: chocolate;
+        border-radius: 200px 200px 0 0;
+        padding-top: 0;
+        vertical-align: top;
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+      }
+      .setengah2 {
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 0 0 200px 200px;
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+        background-position-y: -102px;
+      }
+      .kapsul {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        border-radius: 0 200px 200px 0;
+        background-image: url(fotodiri.jpg);
+        background-size: cover;
+      }
+
+      /* dikasih clear fix */
+      .cf:before,
+      .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+      }
+
+      .cf:after {
+        clear: both;
+      }
+
+      /**
+      * For IE 6/7 only
+      * Include this rule to trigger hasLayout and contain floats.
+      */
+      .cf {
+        *zoom: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1 cf">
+      <div class="main1">
+        <div class="satu"><img src="fotodiri.jpg" alt="" /></div>
+        <div class="dua"></div>
+      </div>
+      <div class="side-bar1">
+        <div class="tiga"></div>
+        <div class="empat"></div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="lingkaran"></div>
+      <div class="setengah1"></div>
+      <div class="setengah2"></div>
+      <div class="kapsul"></div>
+    </div>
+  </body>
+</html>

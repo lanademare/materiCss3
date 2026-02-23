@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      .container {
+        width: 980px;
+        margin: 80px auto;
+        border: 5px solid brown;
+      }
+      .kotak {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+
+      .container:hover .kotak {
+        /* Jalankan animasi 'jalanLaluPutar' selama 6 detik */
+        /* forwards agar kotak tetap di posisi akhir setelah selesai */
+        animation: otak 3s forwards;
+      }
+
+      @keyframes otak {
+        0% {
+          transform: translateX(0) rotate(0deg);
+        }
+        15% {
+          transform: translateX(0) rotate(360deg);
+        }
+        40% {
+          transform: translateX(440px) rotate(360deg);
+        }
+        55% {
+          transform: translateX(440px) rotate(720deg);
+        }
+        85% {
+          transform: translateX(880px) rotate(720deg);
+        }
+        100% {
+          transform: translateX(880px) rotate(1080deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="kotak"></div>
+    </div>
+  </body>
+</html>
